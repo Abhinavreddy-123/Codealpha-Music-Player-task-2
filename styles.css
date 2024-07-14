@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(bisque,pink,orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.music-container{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+   
+}
+.img-container{
+    position: relative;
+    width: 110px;
+}
+
+
+.img-container img{
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-right: 10px;
+    
+    animation: rotate 3s linear infinite;
+   animation-play-state: paused;
+
+   
+
+   
+
+
+}
+
+.music-container.play .img-container img{
+    animation-play-state: running;
+
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+
+    }
+    to{
+         transform: rotate(360deg);
+    }
+}
+.navigation{
+    
+
+    margin-left: 24px;
+
+}
+#title{
+    margin-right: 10px;
+
+}
+.action-btn{
+    border: 0;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 10px;
+
+
+}
+.action-btn big{
+    cursor: pointer;
+    font-size: 70px;
+    
+}
+.action-btn:focus{
+    outline: 0;
+
+
+}
+
